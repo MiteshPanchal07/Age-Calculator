@@ -1,51 +1,233 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
 
-.container {
-    background-color: #1be5d4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
-    text-align: center;
-}
+ body {
+     background: linear-gradient(135deg, #6e8efb, #a777e3);
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+ }
 
-h1 {
-    color: #333;
-}
+ .container {
+     background-color: rgba(255, 255, 255, 0.9);
+     border-radius: 20px;
+     padding: 30px;
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+     width: 100%;
+     max-width: 500px;
+     overflow: hidden;
+     transition: all 0.3s ease;
+ }
 
-.form {
-    margin: 20px 0;
-}
+ .container:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+ }
 
-label {
-    font-weight: bold;
-}
+ h1 {
+     color: #333;
+     text-align: center;
+     margin-bottom: 30px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     font-size: 32px;
+     position: relative;
+     padding-bottom: 15px;
+ }
 
-input[type="date"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
+ h1::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 80px;
+     height: 4px;
+     background: linear-gradient(to right, #6e8efb, #a777e3);
+     border-radius: 4px;
+ }
 
-button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
+ .form {
+     margin-bottom: 25px;
+ }
 
-.result {
-    margin-top: 20px;
-    font-size: 18px;
-}
+ label {
+     display: block;
+     margin-bottom: 12px;
+     font-weight: 500;
+     color: #555;
+     font-size: 18px;
+ }
+
+ input[type="date"] {
+     width: 100%;
+     padding: 15px;
+     font-size: 16px;
+     border: 2px solid #ddd;
+     border-radius: 10px;
+     outline: none;
+     transition: all 0.3s;
+     margin-bottom: 20px;
+     background-color: #f9f9f9;
+ }
+
+ input[type="date"]:focus {
+     border-color: #a777e3;
+     box-shadow: 0 0 10px rgba(167, 119, 227, 0.3);
+ }
+
+ button {
+     width: 100%;
+     background: linear-gradient(to right, #6e8efb, #a777e3);
+     color: white;
+     border: none;
+     padding: 15px;
+     font-size: 18px;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: all 0.3s;
+     font-weight: 600;
+     box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+ }
+
+ button:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 8px 20px rgba(110, 142, 251, 0.6);
+ }
+
+ button:active {
+     transform: translateY(1px);
+ }
+
+ .result {
+     background-color: #f5f5f5;
+     padding: 20px;
+     border-radius: 10px;
+     text-align: center;
+     transition: all 0.5s;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .result p:first-child {
+     color: #555;
+     font-size: 18px;
+     margin-bottom: 10px;
+ }
+
+ #ageResult {
+     font-size: 24px;
+     font-weight: 700;
+     color: #a777e3;
+     transition: all 0.5s;
+ }
+
+ .highlight {
+     animation: pulse 1.5s;
+ }
+
+ @keyframes pulse {
+     0% {
+         transform: scale(1);
+     }
+
+     50% {
+         transform: scale(1.05);
+     }
+
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ .age-detail {
+     display: flex;
+     justify-content: space-around;
+     margin-top: 20px;
+     opacity: 0;
+     height: 0;
+     transition: all 0.5s;
+ }
+
+ .age-detail.show {
+     opacity: 1;
+     height: 100px;
+ }
+
+ .detail-box {
+     text-align: center;
+     width: 30%;
+ }
+
+ .detail-value {
+     font-size: 28px;
+     font-weight: 700;
+     color: #6e8efb;
+ }
+
+ .detail-label {
+     font-size: 14px;
+     color: #777;
+     margin-top: 5px;
+ }
+
+ @media (max-width: 768px) {
+     .container {
+         padding: 20px;
+     }
+
+     h1 {
+         font-size: 28px;
+     }
+
+     button {
+         padding: 12px;
+         font-size: 16px;
+     }
+
+     #ageResult {
+         font-size: 20px;
+     }
+
+     .detail-value {
+         font-size: 22px;
+     }
+
+     .detail-label {
+         font-size: 12px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .container {
+         padding: 15px;
+     }
+
+     h1 {
+         font-size: 24px;
+         margin-bottom: 20px;
+     }
+
+     label {
+         font-size: 16px;
+     }
+
+     input[type="date"] {
+         padding: 12px;
+         font-size: 14px;
+     }
+
+     .result p:first-child {
+         font-size: 16px;
+     }
+
+     #ageResult {
+         font-size: 18px;
+     }
+ }
