@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -14,11 +19,25 @@
         <div class="form">
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob">
-            <button onclick="calculateAge()">Calculate Age</button>
+            <button id="calculateBtn">Calculate Age</button>
         </div>
         <div class="result">
             <p>Your age is:</p>
             <p id="ageResult">0 years, 0 months, 0 days</p>
+            <div class="age-detail" id="ageDetail">
+                <div class="detail-box">
+                    <div class="detail-value" id="yearValue">0</div>
+                    <div class="detail-label">Years</div>
+                </div>
+                <div class="detail-box">
+                    <div class="detail-value" id="monthValue">0</div>
+                    <div class="detail-label">Months</div>
+                </div>
+                <div class="detail-box">
+                    <div class="detail-value" id="dayValue">0</div>
+                    <div class="detail-label">Days</div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
