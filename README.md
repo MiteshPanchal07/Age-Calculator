@@ -17,7 +17,8 @@ This is a simple and interactive web application that allows users to calculate 
 
 ## 📷 Preview
 
-*(![Bullet jpg](https://github.com/user-attachments/assets/b5284791-ff03-42ac-84f6-a3aba3a4336d)*
+*![Bullet jpg](https://github.com/user-attachments/assets/b5284791-ff03-42ac-84f6-a3aba3a4336d) * ![Screenshot_12-5-2025_115212_127 0 0 1](https://github.com/user-attachments/assets/8b6ef526-448e-4259-b3b2-408bc035a748)
+
 
 ## 🚀 How to Use
 
